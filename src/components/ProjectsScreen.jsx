@@ -10,42 +10,42 @@ const ProjectsScreen = ({ onBack }) => {
             desc: t('project_1_desc'),
             tags: ["PotionAPI", "Alchemy.js", "NetherAuth"],
             color: "border-purple-500 text-purple-400",
-            image: "/assets/projects/project_1.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_1.jpg`
         },
         {
             title: t('project_2_title'),
             desc: t('project_2_desc'),
             tags: ["BlockChain", "EmeraldScript", "VillagerUI"],
             color: "border-green-500 text-green-400",
-            image: "/assets/projects/project_2.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_2.jpg`
         },
         {
             title: t('project_3_title'),
             desc: t('project_3_desc'),
             tags: ["React", "Chart.js", "Redstone"],
             color: "border-red-500 text-red-500",
-            image: "/assets/projects/project_3.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_3.jpg`
         },
         {
             title: t('project_4_title'),
             desc: t('project_4_desc'),
             tags: ["SkyScanner", "MapBox", "ElytraKit"],
             color: "border-blue-300 text-blue-300",
-            image: "/assets/projects/project_4.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_4.jpg`
         },
         {
             title: t('project_5_title'),
             desc: t('project_5_desc'),
             tags: ["Security", "ExplosionGuard", "Java"],
             color: "border-orange-500 text-orange-500",
-            image: "/assets/projects/project_5.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_5.jpg`
         },
         {
             title: t('project_6_title'),
             desc: t('project_6_desc'),
             tags: ["WebAudio", "MIDI", "NoteBlock"],
             color: "border-yellow-500 text-yellow-500",
-            image: "/assets/projects/project_6.jpg"
+            image: `${import.meta.env.BASE_URL}assets/projects/project_6.jpg`
         }
     ];
 
@@ -69,7 +69,10 @@ const ProjectsScreen = ({ onBack }) => {
                             {/* Project Image */}
                             {/* Project Image */}
                             <div className="w-full h-32 bg-black/50 mb-4 border border-white/10 relative overflow-hidden group-hover:border-white/30 transition-colors">
-                                <div className="absolute inset-0 bg-[url('/assets/textures/stone.png')] opacity-10 z-0"></div>
+                                <div
+                                    className="absolute inset-0 opacity-10 z-0"
+                                    style={{ backgroundImage: `url('${import.meta.env.BASE_URL}assets/textures/stone.png')` }}
+                                ></div>
                                 <img
                                     src={project.image}
                                     alt={project.title}

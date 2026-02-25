@@ -110,7 +110,10 @@ const LandingPage = ({ onBack, onProjects }) => {
                             onClick={onProjects}
                             className="flex-1 bg-gradient-to-br from-purple-900/50 to-blue-900/50 border border-white/20 p-6 flex flex-col justify-center items-center text-center hover:border-white/50 cursor-pointer transition-all hover:shadow-[0_0_30px_rgba(100,100,255,0.3)] group relative overflow-hidden"
                         >
-                            <div className="absolute inset-0 bg-[url('/assets/textures/nether_portal.gif')] opacity-10 mix-blend-overlay"></div>
+                            <div
+                                className="absolute inset-0 opacity-10 mix-blend-overlay"
+                                style={{ backgroundImage: `url('${import.meta.env.BASE_URL}assets/textures/nether_portal.gif')` }}
+                            ></div>
                             <div className="text-5xl mb-4 group-hover:-translate-y-2 transition-transform duration-300 drop-shadow-[0_0_15px_cyan]">💎</div>
                             <div className="font-minecraft text-2xl text-white group-hover:text-cyan-300 transition-colors">{t('view_projects')}</div>
                             <div className="text-[10px] text-cyan-500 font-pixel mt-2 tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">CLICK TO WARP</div>

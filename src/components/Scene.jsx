@@ -2,10 +2,12 @@ import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
+const modelPath = `${import.meta.env.BASE_URL}models/terra1k.glb`;
+
 const Model = ({ position, scale }) => {
     const groupRef = useRef();
     // Load the custom GLB model
-    const { scene } = useGLTF('/models/terra1k.glb');
+    const { scene } = useGLTF(modelPath);
 
     useFrame((state, delta) => {
         // Slow, majestic rotation
@@ -40,6 +42,6 @@ const Scene = () => {
 };
 
 // Pre-load the model to avoid pop-in
-useGLTF.preload('/models/terra1k.glb');
+useGLTF.preload(modelPath);
 
 export default Scene;
