@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-mc-obsidian text-white font-pixel antialiased;
+    image-rendering: pixelated;
+    cursor: url('/cursores/normal_select.cur'), auto;
+    /* Essential for pixel art look */
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-minecraft;
+  }
+}
+
+/* --- Full Minecraft Cursor Pack Implementation --- */
+
+/* Links & Buttons (Hand) */
+a,
+button,
+input[type="button"],
+input[type="submit"],
+.cursor-pointer,
+.btn-minecraft {
+  cursor: url('/cursores/link_select.cur'), pointer !important;
+}
+
+/* Text Selection (Beam) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+.select-text {
+  cursor: url('/cursores/text.cur'), text !important;
+}
+
+/* Busy / Loading (Hourglass/Animation) */
+.cursor-wait,
+body.waiting {
+  cursor: url('/cursores/busy.ani'), wait !important;
+}
+
+/* Help (Question Mark) */
+.cursor-help {
+  cursor: url('/cursores/help_select.cur'), help !important;
+}
+
+/* Move / Grab */
+.cursor-move {
+  cursor: url('/cursores/move.cur'), move !important;
+}
+
+/* Resizing */
+.cursor-ns-resize {
+  cursor: url('/cursores/vertical_resize.cur'), ns-resize !important;
+}
+
+.cursor-ew-resize {
+  cursor: url('/cursores/horizontal_resize.cur'), ew-resize !important;
+}
+
+.cursor-nwse-resize {
+  cursor: url('/cursores/diagonal_resize_1.cur'), nwse-resize !important;
+}
+
+.cursor-nesw-resize {
+  cursor: url('/cursores/diagonal_resize_2.cur'), nesw-resize !important;
+}
+
+/* Unavailable / Not Allowed */
+.cursor-not-allowed,
+:disabled {
+  cursor: url('/cursores/unavailable.cur'), not-allowed !important;
+}
+
+@layer components {
+  .btn-minecraft {
+    @apply bg-mc-ui-bg text-black font-minecraft py-2 px-4 select-none cursor-pointer active:translate-y-1;
+    box-shadow: inset -4px -4px 0px 0px #555555, inset 4px 4px 0px 0px #FFFFFF, 4px 4px 0px 0px #000000;
+  }
+
+  .btn-minecraft:active {
+    box-shadow: inset 4px 4px 0px 0px #555555, inset -4px -4px 0px 0px #FFFFFF;
+  }
+
+  .panel-minecraft {
+    @apply bg-mc-ui-bg border-4 border-mc-ui-bg relative;
+    box-shadow: inset -4px -4px 0px 0px #555555, inset 4px 4px 0px 0px #FFFFFF, 4px 4px 0px 0px #000000;
+  }
+}
