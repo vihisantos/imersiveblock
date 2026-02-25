@@ -27,25 +27,19 @@ O **Imersive Block** é uma aplicação interativa 3D desenvolvida para demonstr
 * [![Three.js][Three.js]][Three-url]
 * [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
 
-<!-- GETTING STARTED -->
-## 💻 Começando
+<!-- COPYRIGHT & LICENSE -->
+## ⚠️ Direitos Autorais e Licença
 
-Para rodar o projeto localmente, siga os passos abaixo:
+**PROJETO DE CÓDIGO FECHADO (CLOSED SOURCE)**
 
-### Instalação
+Todo o código, design, assets e modelo 3D contidos neste repositório são protegidos por direitos autorais e constituem propriedade intelectual exclusiva de **Vihi Santos**.
 
-1. Clone o repositório
-   ```sh
-   git clone https://github.com/vihisantos/imersiveblock.git
-   ```
-2. Instale os pacotes NPM
-   ```sh
-   npm install
-   ```
-3. Inicie o servidor de desenvolvimento
-   ```sh
-   npm run dev
-   ```
+🚫 **É ESTRITAMENTE PROIBIDO:**
+- Copiar, clonar ou baixar o código-fonte
+- Reproduzir, modificar ou distribuir qualquer parte deste projeto
+- Utilizar comercialmente ou não comercialmente sem autorização expressa
+
+> **Qualquer uso não autorizado, plágio ou cópia deste projeto será considerado violação de direitos autorais e estará sujeito a processo judicial e medidas legais cabíveis.**
 
 <!-- GitHub Actions -->
 ## 🛠️ Deploy com GitHub Actions
