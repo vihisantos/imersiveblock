@@ -32,7 +32,7 @@ function App() {
     <div className="relative w-full h-screen bg-mc-obsidian overflow-hidden">
       {/* 3D Layer */}
       {/* 3D Layer */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none md:pointer-events-auto">
         <Canvas camera={{ position: [0, 2, 5], fov: settings.fov }}>
           <Suspense fallback={null}>
             <CameraUpdater fov={settings.fov} />

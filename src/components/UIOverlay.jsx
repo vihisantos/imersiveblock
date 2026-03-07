@@ -5,12 +5,12 @@ const UIOverlay = ({ onMultiplayer, onShowGame, onOptions }) => {
     const { t } = useTranslation();
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center pointer-events-auto">
-            <div className="text-center mb-8">
-                <h1 className="text-6xl text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.5)] mb-2">
-                    IMERSIVE<span className="text-mc-diamond">BLOCK</span>
+        <div className="w-full h-full flex flex-col items-center justify-center pointer-events-auto px-4 text-center">
+            <div className="mb-8 w-full max-w-[100vw] overflow-hidden">
+                <h1 className="text-[12vw] sm:text-6xl text-white drop-shadow-[4px_4px_0_rgba(0,0,0,0.5)] mb-2 md:whitespace-nowrap leading-none">
+                    IMERSIVE<span className="text-mc-diamond block sm:inline">BLOCK</span>
                 </h1>
-                <p className="text-xl text-gray-300 font-pixel">{t('title')}</p>
+                <p className="text-sm md:text-xl text-gray-300 font-pixel mt-2">{t('title')}</p>
             </div>
 
             <div className="flex flex-col space-y-4 w-64">
@@ -35,7 +35,7 @@ const UIOverlay = ({ onMultiplayer, onShowGame, onOptions }) => {
             </div>
 
 
-            <div className="absolute bottom-4 text-xs text-gray-500 font-pixel">
+            <div className="absolute bottom-4 text-[9px] md:text-xs text-gray-500 font-pixel w-[90%] text-center">
                 Minecraft is a trademark of Mojang Synergies AB. Not affiliated.
             </div>
         </div >
