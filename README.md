@@ -1,65 +1,53 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/vihisantos/imersiveblock/main/public/vite.svg" alt="Logo" width="80" height="80">
-  
-  <h3 align="center">Imersive Block</h3>
+# Imersive Block
 
-  <p align="center">
-    Uma experiência imersiva em 3D usando React, Three.js e Vite!
-    <br />
-    <a href="https://vihisantos.github.io/imersiveblock/"><strong>Ver a Demonstração »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/vihisantos/imersiveblock/issues">Reportar Bug</a>
-    ·
-    <a href="https://github.com/vihisantos/imersiveblock/issues">Solicitar Feature</a>
-  </p>
-</div>
+<p align="center">
+  <strong>Experiencia 3D imersiva com React Three.js.</strong>
+  <br>
+  Aplicacao interativa com renderizacao 3D no browser,
+  <br>
+  suporte a multi-idiomas e design responsivo.
+</p>
 
-<!-- ABOUT THE PROJECT -->
-## 🌟 Sobre o Projeto
+<p align="center">
+  <img src="https://img.shields.io/badge/React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js">
+  <img src="https://img.shields.io/badge/React%20Three%20Fiber-000000?style=for-the-badge&logo=react&logoColor=white" alt="React Three Fiber">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+</p>
 
-O **Imersive Block** é uma aplicação interativa 3D desenvolvida para demonstrar a integração poderosa entre React, react-three-fiber e Tailwind CSS. Com gráficos impressionantes rodando direto no navegador, este projeto é configurado para ser performático, responsivo e equipado com i18next para internacionalização, tudo preparado para deploy contínuo via GitHub Actions.
+---
 
-### 🚀 Tecnologias Utilizadas
+## Sobre
 
-* [![React][React.js]][React-url]
-* [![Vite][Vite.js]][Vite-url]
-* [![Three.js][Three.js]][Three-url]
-* [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+**Imersive Block** e uma experiencia 3D imersiva construida com React Three Fiber e Three.js. Oferece visualizacoes interativas em tres dimensoes diretamente no navegador, com suporte a internacionalizacao (i18next) e design responsivo.
 
-<!-- COPYRIGHT & LICENSE -->
-## ⚠️ Direitos Autorais e Licença
+---
 
-**PROJETO DE CÓDIGO FECHADO (CLOSED SOURCE)**
+## Tech Stack
 
-Todo o código, design, assets e modelo 3D contidos neste repositório são protegidos por direitos autorais e constituem propriedade intelectual exclusiva de **Vihi Santos**.
+| Tecnologia | Proposito |
+|---|---|
+| **React 19** | Biblioteca de interface |
+| **TypeScript** | Tipagem estatica |
+| **Three.js + React Three Fiber + Drei** | Renderizacao 3D |
+| **i18next + react-i18next** | Internacionalizacao |
+| **Tailwind CSS** | Estilizacao |
+| **Vite** | Build tool |
 
-🚫 **É ESTRITAMENTE PROIBIDO:**
-- Copiar, clonar ou baixar o código-fonte
-- Reproduzir, modificar ou distribuir qualquer parte deste projeto
-- Utilizar comercialmente ou não comercialmente sem autorização expressa
+---
 
-> **Qualquer uso não autorizado, plágio ou cópia deste projeto será considerado violação de direitos autorais e estará sujeito a processo judicial e medidas legais cabíveis.**
+## Funcionalidades
 
-<!-- GitHub Actions -->
-## 🛠️ Deploy com GitHub Actions
+- Renderizacao 3D interativa
+- Multi-idioma (i18next)
+- Design responsivo
+- Performance otimizada
 
-Este projeto já está configurado com CI/CD para deploy automático no GitHub Pages!
-Sempre que um novo commit for feito na branch `main`, o GitHub Actions vai realizar o build (`npm run build`) e fazer o upload do conteúdo estático automaticamente, graças à configuração do `base` no Vite.
+---
 
-<!-- CONTACT -->
-## 📫 Contato
-
-Vihi Santos - [GitHub Profile](https://github.com/vihisantos)
-
-📱 Repositório Github: [https://github.com/vihisantos/imersiveblock](https://github.com/vihisantos/imersiveblock)
-
-<!-- MARKDOWN LINKS & IMAGES -->
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vite.js]: https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E
-[Vite-url]: https://vitejs.dev/
-[Three.js]: https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white
-[Three-url]: https://threejs.org/
-[TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
-[TailwindCSS-url]: https://tailwindcss.com/
+<p align="center">
+  <br>
+  <sub>Desenvolvido por <a href="https://capybaraholding.com.br" target="_blank"><strong>Capybara Holding</strong></a></sub>
+  <br>
+  <sub>&copy; 2026 Imersive Block. Todos os direitos reservados.</sub>
+</p>
