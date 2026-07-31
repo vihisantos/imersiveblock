@@ -1,26 +1,29 @@
-import React, { Suspense, useState, useEffect } from 'react';
-import { Canvas, useThree } from '@react-three/fiber';
+import React, { Suspense, useState, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Stars } from '@react-three/drei';
 import Scene from './components/Scene';
 import UIOverlay from './components/UIOverlay';
 import ContactScreen from './components/ContactScreen';
 import OptionsScreen from './components/OptionsScreen';
-
 import LandingPage from './components/LandingPage';
 import ProjectsScreen from './components/ProjectsScreen';
+import DevLog from './components/DevLog';
 
-// Helper to update camera live
 const CameraUpdater = ({ fov }) => {
-  const { camera } = useThree();
-  useEffect(() => {
-    camera.fov = fov;
-    camera.updateProjectionMatrix();
-  }, [fov, camera]);
+  const cameraRef = useRef(null);
+
+  useFrame(({ camera }) => {
+    cameraRef.current = camera;
+    if (camera.fov !== fov) {
+      camera.fov = fov;
+      camera.updateProjectionMatrix();
+    }
+  });
   return null;
 };
 
 function App() {
-  const [view, setView] = useState('home'); // 'home' | 'multiplayer' | 'options' | 'game'
+  const [view, setView] = useState('home'); // 'home' | 'multiplayer' | 'options' | 'game' | 'devlog'
   const [settings, setSettings] = useState({
     fov: 70,
     musicVol: 50,
@@ -60,8 +63,9 @@ function App() {
             onBack={() => setView('home')}
           />
         )}
-        {view === 'game' && <LandingPage onBack={() => setView('home')} onProjects={() => setView('projects')} />}
+        {view === 'game' && <LandingPage onBack={() => setView('home')} onProjects={() => setView('projects')} onDevLog={() => setView('devlog')} />}
         {view === 'projects' && <ProjectsScreen onBack={() => setView('game')} />}
+        {view === 'devlog' && <DevLog onBack={() => setView('home')} />}
       </div>
     </div>
   );

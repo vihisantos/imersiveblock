@@ -4,22 +4,22 @@ import { useGLTF } from '@react-three/drei';
 
 const modelPath = `${import.meta.env.BASE_URL}models/terra1k.glb`;
 
-const Model = ({ position, scale }) => {
-    const groupRef = useRef();
-    // Load the custom GLB model
+const SceneContent = () => {
     const { scene } = useGLTF(modelPath);
+    const groupRef = useRef();
 
     useFrame((state, delta) => {
-        // Slow, majestic rotation
-        groupRef.current.rotation.y += delta * 0.1;
+        if (groupRef.current) {
+            groupRef.current.rotation.y += delta * 0.1;
+        }
     });
 
     return (
         <primitive
             ref={groupRef}
             object={scene}
-            position={position}
-            scale={scale}
+            position={[0, -1, 0]}
+            scale={[4, 4, 4]}
         />
     );
 };
@@ -27,13 +27,7 @@ const Model = ({ position, scale }) => {
 const Scene = () => {
     return (
         <group>
-            {/* 
-         Using the custom uploaded model.
-         Scale set to 2x for visibility, adjust as needed.
-      */}
-            <Model position={[0, -1, 0]} scale={[4, 4, 4]} />
-
-            {/* Lighting setup to ensure the model looks good */}
+            <SceneContent />
             <ambientLight intensity={0.4} />
             <directionalLight position={[4, 5, 4]} intensity={1.1} />
             <directionalLight position={[-4, 5, -4]} intensity={0.5} />
@@ -41,7 +35,6 @@ const Scene = () => {
     );
 };
 
-// Pre-load the model to avoid pop-in
 useGLTF.preload(modelPath);
 
 export default Scene;

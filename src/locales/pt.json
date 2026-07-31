@@ -48,5 +48,13 @@
     "project_6_desc": "Componha músicas usando apenas inputs de Redstone. Exporte faixas para .schematic para construção in-game.",
     "tech_stack": "Techs",
     "view_code": "Código",
-    "deploy": "Demo"
+    "deploy": "Demo",
+    "devlog": "Diário de Desenvolvimento",
+    "devlog_title": "Diário de Desenvolvimento",
+    "devlog_1_title": "Gênese do Projeto",
+    "devlog_1_desc": "Comecei a construir o portfólio 3D imersivo com React Three Fiber. Configurei a cena base com estrelas, controles de órbita e o modelo da Terra.",
+    "devlog_2_title": "Forjando a Interface",
+    "devlog_2_desc": "Construí todas as telas com UI inspirada em Minecraft. Adicionei i18next para suporte multi-idioma e Tailwind para estilização pixel-perfect.",
+    "devlog_3_title": "SEO & Otimização",
+    "devlog_3_desc": "Adicionei dados estruturados Schema.org, geração de sitemap e otimizações de performance para melhor ranqueamento."
 }

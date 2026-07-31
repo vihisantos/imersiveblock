@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const ContactScreen = ({ onBack }) => {
     const { t } = useTranslation();
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center p-8 pointer-events-auto bg-black/70 backdrop-blur-sm">
+        <div className="w-full h-full flex flex-col items-center justify-center p-8 pointer-events-auto bg-black/70 backdrop-blur-sm screen-enter">
             <div className="w-full max-w-4xl flex flex-col items-center">
                 {/* Header */}
                 <h2 className="text-white text-4xl font-minecraft mb-8 drop-shadow-md">{t('play_multiplayer')}</h2>

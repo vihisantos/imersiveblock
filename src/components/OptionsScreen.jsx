@@ -4,7 +4,7 @@ import { useMinecraftSound } from '../hooks/useMinecraftSound';
 
 const OptionsScreen = ({ onBack, currentSettings, onSave }) => {
     const [settings, setSettings] = useState(currentSettings);
-    const playClick = useMinecraftSound();
+    const { playClick } = useMinecraftSound();
     const { t, i18n } = useTranslation();
 
     const handleChange = (key, value) => {
@@ -32,7 +32,7 @@ const OptionsScreen = ({ onBack, currentSettings, onSave }) => {
     };
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-center pointer-events-auto bg-black/70 backdrop-blur-sm">
+        <div className="w-full h-full flex flex-col items-center justify-center pointer-events-auto bg-black/70 backdrop-blur-sm screen-enter">
             <h2 className="text-white text-4xl font-minecraft mb-8 drop-shadow-md">{t('options')}</h2>
 
             <div className="flex flex-col gap-6 w-96">
@@ -99,18 +99,6 @@ const Slider = ({ label, value, onChange }) => (
                 background: `linear-gradient(to right, #567D46 ${value}%, #373737 ${value}%)`
             }}
         />
-        <style jsx>{`
-            .slider-thumb-minecraft::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 20px;
-                height: 30px;
-                background: #C6C6C6;
-                border: 2px solid white;
-                box-shadow: 4px 0px 0px 0px black;
-                cursor: pointer;
-            }
-        `}</style>
     </div>
 );
 

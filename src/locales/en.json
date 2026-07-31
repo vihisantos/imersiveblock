@@ -48,5 +48,13 @@
     "project_6_desc": "Compose music using only Redstone inputs. Export your tracks to .schematic format for in-game construction.",
     "tech_stack": "Stack",
     "view_code": "View Code",
-    "deploy": "Live Demo"
+    "deploy": "Live Demo",
+    "devlog": "Dev Log",
+    "devlog_title": "Dev Log",
+    "devlog_1_title": "Project Genesis",
+    "devlog_1_desc": "Started building the immersive 3D portfolio with React Three Fiber. Set up the base scene with stars, orbit controls, and the Earth model.",
+    "devlog_2_title": "Crafting the UI",
+    "devlog_2_desc": "Built all screens with Minecraft-inspired UI. Added i18next for multi-language support and Tailwind for pixel-perfect styling.",
+    "devlog_3_title": "SEO & Optimization",
+    "devlog_3_desc": "Added Schema.org structured data, sitemap generation, and performance optimizations for better search rankings."
 }

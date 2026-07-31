@@ -91,14 +91,80 @@ body.waiting {
   .btn-minecraft {
     @apply bg-mc-ui-bg text-black font-minecraft py-2 px-4 select-none cursor-pointer active:translate-y-1;
     box-shadow: inset -4px -4px 0px 0px #555555, inset 4px 4px 0px 0px #FFFFFF, 4px 4px 0px 0px #000000;
+    transition: all 0.1s ease;
+  }
+
+  .btn-minecraft:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
   }
 
   .btn-minecraft:active {
     box-shadow: inset 4px 4px 0px 0px #555555, inset -4px -4px 0px 0px #FFFFFF;
+    transform: translateY(1px);
   }
 
   .panel-minecraft {
     @apply bg-mc-ui-bg border-4 border-mc-ui-bg relative;
     box-shadow: inset -4px -4px 0px 0px #555555, inset 4px 4px 0px 0px #FFFFFF, 4px 4px 0px 0px #000000;
   }
+
+  .screen-enter {
+    animation: screenFadeIn 0.3s ease-out;
+  }
+}
+
+@keyframes screenFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.slider-thumb-minecraft::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 30px;
+  background: #C6C6C6;
+  border: 2px solid white;
+  box-shadow: 4px 0px 0px 0px black;
+  cursor: pointer;
+}
+
+.slider-thumb-minecraft::-moz-range-thumb {
+  width: 20px;
+  height: 30px;
+  background: #C6C6C6;
+  border: 2px solid white;
+  box-shadow: 4px 0px 0px 0px black;
+  cursor: pointer;
 }

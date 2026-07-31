@@ -50,7 +50,7 @@ const ProjectsScreen = ({ onBack }) => {
     ];
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-start pt-12 pb-12 pointer-events-auto bg-black/65 backdrop-blur-md overflow-y-auto">
+        <div className="w-full h-full flex flex-col items-center justify-start pt-12 pb-12 pointer-events-auto bg-black/65 backdrop-blur-md overflow-y-auto screen-enter">
 
             <div className="w-full max-w-6xl px-4 flex flex-col items-center">
                 <div className="flex items-center justify-between w-full mb-8 border-b-2 border-white/20 pb-4">

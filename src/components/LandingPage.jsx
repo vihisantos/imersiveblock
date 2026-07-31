@@ -5,7 +5,7 @@ const LandingPage = ({ onBack, onProjects }) => {
     const { t } = useTranslation();
 
     return (
-        <div className="w-full h-full flex flex-col items-center justify-start pt-20 pointer-events-auto bg-black/60 backdrop-blur-md overflow-y-auto">
+        <div className="w-full h-full flex flex-col items-center justify-start pt-20 pointer-events-auto bg-black/60 backdrop-blur-md overflow-y-auto screen-enter">
 
             {/* Achievement Pop-up Style Header */}
             <div className="bg-[#202020] border-2 border-white text-yellow-300 px-6 py-4 mb-10 flex items-center gap-4 animate-slide-down shadow-lg">
